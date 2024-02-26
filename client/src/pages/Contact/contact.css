@@ -1,0 +1,214 @@
+.contact-container {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  background-image: url(../../images/contact.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-container > .shade {
+  width: 100%;
+  min-height: 90vh;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem 1rem;
+}
+.shade > .heading {
+  text-align: center;
+  color: #fff;
+}
+.shade > .contact-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 1rem;
+}
+.contact-content > .form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0.4rem;
+  padding: 2rem 1rem 1rem;
+  border: 1px solid orangered;
+  animation: form 3s ease-in-out;
+}
+@keyframes form {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.contact-content > .form > input {
+  width: 100%;
+  height: 3rem;
+  padding: 0.2rem 0.8rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-bottom: 2px solid orangered;
+  box-shadow: 0.3rem 0.3rem 0.2rem 0rem rgba(0, 0, 0, 0.5);
+}
+.form > input::placeholder,
+.form > textarea::placeholder {
+  color: #ccc;
+}
+.contact-content > .form > textarea {
+  width: 100%;
+  height: 7rem;
+  padding: 0.2rem 0.8rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-bottom: 2px solid orangered;
+  resize: none;
+  box-shadow: 0.3rem 0.3rem 0.2rem 0rem rgba(0, 0, 0, 0.5);
+}
+.contact-content > .form > textarea::-webkit-scrollbar {
+  display: none;
+}
+.form > .button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+.form > .button > button {
+  width: 6.5rem;
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 2rem;
+  background: orangered;
+  color: #fff;
+  box-shadow: 0.2rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
+  transition: 0.1s;
+}
+.form > .button > button:hover {
+  background: transparent;
+  border: 2px solid orangered;
+  color: orangered;
+}
+.form > .button > button:active {
+  transform: scale(0.98);
+}
+.contact-content > .map {
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid orangered;
+  animation: map 3s ease-in-out;
+}
+@keyframes map {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.contact-content > .map > iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+/* contact-bottom */
+.shade > .contact-bottom {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.contact-bottom > .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  padding: 1rem 1rem;
+  animation: box 3s ease-in-out;
+}
+@keyframes box {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.contact-bottom > .box-container > .box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  border-radius: 0.3rem;
+  background: orangered;
+  color: #fff;
+}
+.box-container > .box > svg {
+  font-size: 3.5rem;
+  padding: 0.5rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.box:hover > svg {
+  animation: icon 1s linear;
+}
+@keyframes icon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.box-container > .box > h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+}
+.box-container > .box > span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ccc;
+  letter-spacing: 1px;
+}
+
+/* Responsiveness */
+@media (max-width: 430px) {
+  .contact-content > .form {
+    width: 20.5rem;
+    padding: 1rem 0.3rem;
+  }
+  .form > .button > button {
+    padding: 0.4rem 0;
+    width: 6rem;
+    font-size: 1rem;
+  }
+  .contact-content > .map {
+    width: 20.5rem;
+    height: 20rem;
+  }
+  .box-container > .box > span {
+    letter-spacing: normal;
+  }
+}

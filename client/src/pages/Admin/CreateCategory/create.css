@@ -1,0 +1,38 @@
+.categoryItems {
+  width: 60%;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.buttons > button {
+  padding: 0.3rem 0.7rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: rgb(0, 153, 255);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 0.3rem;
+  box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+  transition: color 0.3s;
+}
+.buttons > button:nth-child(2) {
+  background: red;
+  color: #fff;
+}
+.buttons > button:active {
+  transform: scale(0.98);
+}
+.buttons > button:hover:nth-child(1) {
+  transform: scale(1.02);
+}
+
+/* ResponsiveNess */
+@media (max-width: 800px) {
+  .categoryItems {
+    width: 97%;
+  }
+}

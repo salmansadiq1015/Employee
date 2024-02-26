@@ -1,0 +1,43 @@
+.navbar {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+  --webkit-box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+  border-bottom: 0.5px solid rgb(170, 170, 170);
+  width: 100%;
+  z-index: 99;
+  /* position: fixed; */
+}
+.nav-link {
+  font-weight: 400;
+  margin-left: 0.5rem;
+  border-radius: 0.3rem;
+}
+.cardCollection > .nav-link > svg {
+  color: orangered;
+}
+.cardCollection > .nav-link.active > svg {
+  color: #fff;
+}
+
+.nav-link:hover {
+  color: orangered;
+}
+.nav-link.active {
+  background: orangered;
+  color: #fff !important;
+  box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+.dropdown-menu > li:hover {
+  background: #ccc;
+}
+.dropdown-menu > li > .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.hcategory-list:hover {
+  color: orangered !important;
+}

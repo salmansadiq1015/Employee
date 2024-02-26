@@ -80,18 +80,20 @@ export default function Home() {
             <FaPlus className="h-4 w-4 text-white" />
             Worker
           </button>
-          <div className="relative w-[15rem] h-[2.7rem] ">
-            <span className="absolute top-[.6rem] left-1">
-              <IoSearchOutline className="h-6 w-6 text-gray-300" />
-            </span>
-            <input
-              type="search"
-              placeholder="Search..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full h-full rounded-md shadow-sm border-2 border-gray-300 outline-none pl-7 text-gray-900 pr-2"
-            />
-          </div>
+          {active === "list" && (
+            <div className="relative w-[15rem] h-[2.7rem] ">
+              <span className="absolute top-[.6rem] left-1">
+                <IoSearchOutline className="h-6 w-6 text-gray-300" />
+              </span>
+              <input
+                type="search"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full h-full rounded-md shadow-sm border-2 border-gray-300 outline-none pl-7 text-gray-900 pr-2"
+              />
+            </div>
+          )}
         </div>
       </div>
       {/* List & Map View */}

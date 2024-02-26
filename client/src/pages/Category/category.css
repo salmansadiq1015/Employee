@@ -1,0 +1,95 @@
+.all-category-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: #ccc;
+  padding: 2rem 0.5rem;
+}
+.all-category-container > h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: orangered;
+  text-shadow: -1px 1px 0px #444, -2px 2px 0px #444, -3px 3px 0px #444;
+}
+
+.category-clist {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.category-clist > h6 {
+  position: relative;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid orangered;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+.category-clist > h6::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: orangered;
+  transition: 0.5s;
+  z-index: 1;
+}
+.category-clist > h6:hover::before {
+  width: 100%;
+}
+.category-clist > h6 > a {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+  color: orangered;
+  z-index: 10;
+  transition: 0.3s;
+}
+.category-clist > h6:hover > a {
+  color: #fff;
+}
+.category-head {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.category-head > h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #000;
+}
+.category-card {
+  width: 25rem;
+  transition: 0.3s;
+}
+.category-card:hover {
+  border: 1px solid orangered;
+  box-shadow: 0.3rem 0.3rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+.category-card > img {
+  height: 21rem;
+}
+
+/* Responsiveness */
+@media (max-width: 450px) {
+  .category-card {
+    width: 21rem;
+    transition: 0.3s;
+  }
+  .category-card > img {
+    height: 17rem;
+  }
+  .all-category-container > h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+}
