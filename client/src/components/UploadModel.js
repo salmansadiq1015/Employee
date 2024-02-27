@@ -61,7 +61,7 @@ export default function UploadModel({ setOpenModel, getEmployeeData }) {
 
       <form
         onSubmit={handleUpload}
-        className="flex flex-col gap-4 mt-6 max-h-[460px] sm:max-h-[550px] overflow-y-auto pb-[1rem] sm:py-0"
+        className="flex flex-col gap-4 mt-6 max-h-[460px] sm:max-h-[520px] overflow-y-auto pb-[1rem] sm:py-0"
       >
         <div className="flex flex-col gap-1 w-full">
           <span className="text-[16px] font-medium text-gray-950">
