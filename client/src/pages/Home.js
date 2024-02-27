@@ -110,7 +110,7 @@ export default function Home() {
 
       {/* Add Employee Data */}
       {openModel && (
-        <div className="fixed top-0 left-0 z-[50] px-1 w-full h-full bg-black/50 flex items-center justify-center ">
+        <div className="fixed top-0 left-0 z-[50] px-1 py-4 w-full h-full bg-black/50 flex items-center justify-center ">
           <UploadModel
             setOpenModel={setOpenModel}
             getEmployeeData={getEmployeeData}
